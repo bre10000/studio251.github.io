@@ -1,0 +1,396 @@
+$white: #fff;
+$light-gray: rgb(228, 228, 228);
+$gray: rgb(150, 150, 150);
+$dark: rgb(33, 33, 33);
+.has-border-right-gray{
+    border-right: 1px solid $light-gray !important;
+}
+.has-border-bottom-gray{
+    border-bottom: 1px solid $light-gray !important;
+}
+.has-text-gray {
+    color: $gray;
+}
+
+.line-height-small{
+    line-height: 1;
+}
+* {
+    transition: all 0.1s linear !important;
+}
+.letter-spacing-1{
+    letter-spacing: 1px;
+}
+.letter-spacing-2{
+    letter-spacing: 2px;
+}
+
+
+body{
+    overflow: hidden !important;
+    height: 100vh;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+nav {
+    position: relative;
+    min-width: 300px !important;
+    height: 100vh;
+    overflow-y: hidden;
+    .aside-link {
+        letter-spacing: 2px;
+    }
+    button.profile-dropdown {
+        border: none;
+        outline: none !important;
+        background-color: transparent;
+        &:focus, &:active, &:hover{
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+            border-color: transparent !important;
+        }
+    }
+    .bottom-nav {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        width: 100%;
+    }
+    a.aside-link.is-active {
+        color: $dark;
+        font-weight: bold !important;
+    }
+}
+
+#navbar-burger, #navbar-close {
+    display: none;
+}
+
+main{
+    position: relative;
+    overflow-y: auto !important;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh !important;
+    background-color: $white;
+    margin: 0 auto;
+    div.content-main {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 33, 33, 0.165);
+    z-index: 40;
+    display: none;
+    &.is-active {
+        display: block;
+    }
+}
+
+.mobile-bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 35;
+    border-top: 1px solid $light-gray;
+    display: none;
+    div a {
+        color: $gray !important;
+        &.is-active {
+            background-color: $light-gray;
+            color: $dark !important;
+            * { 
+                color: $dark !important;
+            }
+        }
+        width: 50px;
+    }
+}
+@media screen and (max-width: 1024px){
+    #navbar-burger, #navbar-close {
+        display: inline;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        min-width: 400px !important;
+        z-index: 50;
+        background-color: $white;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+        .logo-container {
+            justify-content: space-between !important;
+        }
+    }
+    nav.is-active {
+        transform: translateX(0);
+    }
+    main {
+        padding-top: 100px;
+    }
+    .main-title-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $white;
+        z-index: 30;
+        padding-left: 0 !important;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+}
+
+
+
+@media screen and (max-width: 768px){
+    .line-height-small{
+        line-height: 1.4;
+    }
+    .is-size-3 {
+        font-size: 1.5rem !important;
+    }
+    nav {
+        width: 85vw;
+    }
+    .mobile-bottom-navigation {
+        display: block !important;
+    }
+
+    main {
+        top:120px;
+        padding-top: 0px;
+        height: calc(100vh - 140px) !important;
+    }
+    // .main-title-bar-container {
+    //     flex-direction: column;
+    //     div {
+    //         justify-content: flex-end;
+    //         padding-top: 1rem;
+    //         color: $gray;
+    //     }
+    // }
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+
+// Dark Mode
+
+body.dark-mode {
+    $white: rgb(24, 24, 24);
+    $off-white: rgb(38, 38, 38);
+    $light-gray: rgb(56, 56, 56);
+    $gray: rgb(155, 155, 155);
+    $dark: #fff;
+
+    background-color: $white !important;
+    color: white;
+
+    .has-text-dark {
+        color: white !important;
+    }
+    .has-background-light {
+        background-color: $off-white !important;
+    }
+    a.has-text-gray:hover {
+        color: white;
+    }
+    .is-light {
+        background-color: $off-white !important;
+        color: white;
+    }
+    button.is-light {
+        background-color: $off-white !important;
+        &:hover{
+            background-color: $gray !important;
+            color: white;
+        }
+    }
+    button.is-dark {
+        background-color: $dark !important;
+        color: $white !important;
+        &:hover, &:focus, &:active{
+            background-color: $light-gray !important;
+            color: $dark !important;
+        }
+    }
+    .card button.is-light {
+        background-color: $light-gray !important;
+        &:hover{
+            background-color: $gray !important;
+            color: white;
+        }
+    }
+
+    .has-border-right-gray{
+        border-right: 1px solid rgb(53, 53, 53) !important;
+    }
+    .has-border-bottom-gray{
+        border-bottom: 1px solid $light-gray !important;
+    }
+    .has-text-gray {
+        color: $gray;
+    }
+
+    nav {
+        background-color: $white;
+        a.aside-link.is-active {
+            color: $dark;
+            font-weight: bold !important;
+        }
+        .dropdown-content.is-light a{
+            &:hover {
+                background-color: $gray !important;
+                color: $white;
+            }
+        }
+    }
+    main{
+        background-color: $white;
+    }
+
+    // .main-title-bar {
+    //     background-color: $white;
+    // }
+
+    .mobile-bottom-navigation {
+        border-top: 1px solid $light-gray;
+        div a {
+            color: $gray !important;
+            &.is-active {
+                background-color: $light-gray;
+                color: $dark !important;
+                * { 
+                    color: $dark !important;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1216px){
+        .main-title-bar {
+            background-color: $white;
+        }
+    }
+}
+
+
+// scrollbar
+main{
+    &::-webkit-scrollbar {
+        width: .9rem;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: rgb(202, 202, 202);
+        border-radius: 99vmax;
+        border: 4px solid rgb(240, 240, 240);
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: rgb(240, 240, 240);
+    }
+}
+
+.dark-mode main{
+    &::-webkit-scrollbar {
+        width: .9rem;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: rgb(109, 109, 109);
+        border-radius: 99vmax;
+        border: 4px solid #111;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: #111;
+    }
+}
+
+
+
+// Tweak these to change the style of the toggle
+$toggle-background-color-on: rgb(38, 38, 38);
+$toggle-background-color-off: rgb(38, 38, 38);
+$toggle-control-color: white;
+$toggle-width: 70px;
+$toggle-height: 35px;
+$toggle-gutter: 1px;
+$toggle-radius: 50%;
+$toggle-control-speed: .15s;
+$toggle-control-ease: ease-in;
+
+// These are our computed variables
+// change at your own risk.
+$toggle-radius: $toggle-height / 2;
+$toggle-control-size: $toggle-height - ($toggle-gutter * 2);
+
+.toggle-control {
+  display: inline;
+  position: relative;
+  padding-left: $toggle-width;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    
+  }
+
+  input:checked ~ .control {
+    background-color: $toggle-background-color-on;
+    
+    &:after {
+      left: $toggle-width - $toggle-control-size - $toggle-gutter;
+    }
+  }
+
+  .control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $toggle-height;
+    width: $toggle-width;
+    border-radius: $toggle-radius;
+    background-color: $toggle-background-color-off;
+    transition: background-color $toggle-control-speed $toggle-control-ease;
+
+    background-image: url("../images/icons/light-dark-mode.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: $toggle-gutter;
+      top: $toggle-gutter;
+      width: $toggle-control-size;
+      height: $toggle-control-size;
+      border-radius: $toggle-radius;
+      background: $toggle-control-color;
+      transition: left $toggle-control-speed $toggle-control-ease;
+    }
+  }
+}

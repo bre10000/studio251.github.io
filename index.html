@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio 251</title>
+  <link type="text/css" href="./vendor/bulma/dist/css/bulma.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./vendor/grid-gallery/grid-gallery.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/custom-general.css">
+
+</head>
+
+<body id="body">
+
+  <div class="is-flex">
+    <!-- Navigation -->
+    <nav>
+      <div class="is-flex is-justify-content-center is-align-items-center p-4 mt-6 logo-container">
+        <a href="./index.html" class="p-3">
+          <img src="./images/studio-251-logo.png" alt="studio 251 logo" width="120">
+        </a>
+
+        <a class="p-3" id="navbar-close">
+          <img src="./images/close.png" width="50" alt="">
+        </a>
+      </div>
+
+      <div class="container-fluid px-5 mt-6">
+        <a href="./index.html" class="aside-link is-flex pb-4 has-text-gray has-text-weight-semibold is-justify-content-center is-size-6 is-active">
+          <span>PORTFOLIO</span>
+        </a>
+        <a href="./contact.html" class="aside-link is-flex pb-4 has-text-gray has-text-weight-semibold is-justify-content-center is-size-6">
+          <span>CONTACT </span>
+        </a>
+        <a href="./index.html" class="aside-link is-flex pb-4 has-text-gray has-text-weight-semibold is-justify-content-center is-size-6">
+          <span>ABOUT </span>
+        </a>
+        
+       
+      </div>
+
+      <div class="bottom-nav is-flex is-justify-content-center px-4 pr-5">
+        <a href="https://www.instagram.com/studio_251/"><img src="./images/instagram.png" alt="Instagram Link" width="75"></a>
+      </div>
+
+    </nav>
+    <!-- Navigation End -->
+
+
+
+    <main class="dashboard">
+
+      <div class="container-fluid main-title-bar p-5">
+        <h1 class="is-size-4 has-text-weight-bold is-flex is-justify-content-space-between is-align-items-center">
+          <a href="./index.html" class="p-3 is-hidden-desktop py-2 ml-5" >
+            <img src="./images/studio-251-logo.png" alt="studio 251 logo" width="75">
+            </a>
+            <div class="py-4">
+              <img id="navbar-burger" src="./images/threelines.png" alt="navbar button" width="75">
+            </div>
+          
+          
+        </h1>
+      </div>
+
+      
+      
+      <div class="gg-container mx-4">
+        <div class="gg-box dark">
+          <img src="./images/portfolio/thumbnail/1-doughnut-thumbnail.jpg">
+          <img src="./images/portfolio/thumbnail/2-generaccion-thumbnail.jpg">
+          <img src="./images/portfolio/thumbnail/3-aqua-render-thumbnail.PNG">
+          <img src="./images/portfolio/thumbnail/4-jebena-and-sini-thumbnail.jpg">
+          <img src="./images/portfolio/thumbnail/5-251-black-headphone-thumbnail.jpg">
+          <img src="./images/portfolio/thumbnail/6-flood-is-coming-thumbnail.jpg">
+          <img src="./images/portfolio/thumbnail/7-jebena-thumbnail.jpg">
+          <img src="./images/portfolio/thumbnail/8-fools-gold-thumbnail.jpg">
+          <img src="./images/portfolio/thumbnail/8-fools-gold-thumbnail.jpg">
+          <img src="./images/portfolio/thumbnail/9-particle-bottle-thumbnail.jpg">
+          <img src="./images/portfolio/thumbnail/10-heart-thumbnail.jpg">
+          <img src="./images/portfolio/thumbnail/11-aqua-thumbnail.jpg">
+          <img src="./images/portfolio/thumbnail/12-coco-loco-thumbnail.jpg">
+        </div>
+      </div>
+
+        
+    </main>
+  </div>
+
+
+  <div class="overlay">
+  </div>
+
+
+  
+  <script src="./js/nav.js"></script>
+  <script src="vendor/grid-gallery/grid-gallery.min.js"></script>
+  
+  <script>
+    gridGallery({
+      selector: ".dark",
+      darkMode: true,
+      gaplength: 25,
+      columnWidth: 380
+    });
+  </script>
+
+</body>
+
+</html>

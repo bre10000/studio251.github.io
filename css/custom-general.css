@@ -1,0 +1,340 @@
+.has-border-right-gray {
+  border-right: 1px solid #e4e4e4 !important;
+}
+
+.has-border-bottom-gray {
+  border-bottom: 1px solid #e4e4e4 !important;
+}
+
+.has-text-gray {
+  color: #969696;
+}
+
+.line-height-small {
+  line-height: 1;
+}
+
+* {
+  transition: all 0.1s linear !important;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2px;
+}
+
+body {
+  overflow: hidden !important;
+  height: 100vh;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: relative;
+  min-width: 300px !important;
+  height: 100vh;
+  overflow-y: hidden;
+}
+nav .aside-link {
+  letter-spacing: 2px;
+}
+nav button.profile-dropdown {
+  border: none;
+  outline: none !important;
+  background-color: transparent;
+}
+nav button.profile-dropdown:focus, nav button.profile-dropdown:active, nav button.profile-dropdown:hover {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+nav .bottom-nav {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+}
+nav a.aside-link.is-active {
+  color: #212121;
+  font-weight: bold !important;
+}
+
+#navbar-burger, #navbar-close {
+  display: none;
+}
+
+main {
+  position: relative;
+  overflow-y: auto !important;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100vh !important;
+  background-color: #fff;
+  margin: 0 auto;
+}
+main div.content-main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.165);
+  z-index: 40;
+  display: none;
+}
+.overlay.is-active {
+  display: block;
+}
+
+.mobile-bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 35;
+  border-top: 1px solid #e4e4e4;
+  display: none;
+}
+.mobile-bottom-navigation div a {
+  color: #969696 !important;
+  width: 50px;
+}
+.mobile-bottom-navigation div a.is-active {
+  background-color: #e4e4e4;
+  color: #212121 !important;
+}
+.mobile-bottom-navigation div a.is-active * {
+  color: #212121 !important;
+}
+
+@media screen and (max-width: 1024px) {
+  #navbar-burger, #navbar-close {
+    display: inline;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    min-width: 400px !important;
+    z-index: 50;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+  }
+  nav .logo-container {
+    justify-content: space-between !important;
+  }
+
+  nav.is-active {
+    transform: translateX(0);
+  }
+
+  main {
+    padding-top: 100px;
+  }
+
+  .main-title-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 30;
+    padding-left: 0 !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .line-height-small {
+    line-height: 1.4;
+  }
+
+  .is-size-3 {
+    font-size: 1.5rem !important;
+  }
+
+  nav {
+    width: 85vw;
+  }
+
+  .mobile-bottom-navigation {
+    display: block !important;
+  }
+
+  main {
+    top: 120px;
+    padding-top: 0px;
+    height: calc(100vh - 140px) !important;
+  }
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body.dark-mode {
+  background-color: #181818 !important;
+  color: white;
+}
+body.dark-mode .has-text-dark {
+  color: white !important;
+}
+body.dark-mode .has-background-light {
+  background-color: #262626 !important;
+}
+body.dark-mode a.has-text-gray:hover {
+  color: white;
+}
+body.dark-mode .is-light {
+  background-color: #262626 !important;
+  color: white;
+}
+body.dark-mode button.is-light {
+  background-color: #262626 !important;
+}
+body.dark-mode button.is-light:hover {
+  background-color: #9b9b9b !important;
+  color: white;
+}
+body.dark-mode button.is-dark {
+  background-color: #fff !important;
+  color: #181818 !important;
+}
+body.dark-mode button.is-dark:hover, body.dark-mode button.is-dark:focus, body.dark-mode button.is-dark:active {
+  background-color: #383838 !important;
+  color: #fff !important;
+}
+body.dark-mode .card button.is-light {
+  background-color: #383838 !important;
+}
+body.dark-mode .card button.is-light:hover {
+  background-color: #9b9b9b !important;
+  color: white;
+}
+body.dark-mode .has-border-right-gray {
+  border-right: 1px solid #353535 !important;
+}
+body.dark-mode .has-border-bottom-gray {
+  border-bottom: 1px solid #383838 !important;
+}
+body.dark-mode .has-text-gray {
+  color: #9b9b9b;
+}
+body.dark-mode nav {
+  background-color: #181818;
+}
+body.dark-mode nav a.aside-link.is-active {
+  color: #fff;
+  font-weight: bold !important;
+}
+body.dark-mode nav .dropdown-content.is-light a:hover {
+  background-color: #9b9b9b !important;
+  color: #181818;
+}
+body.dark-mode main {
+  background-color: #181818;
+}
+body.dark-mode .mobile-bottom-navigation {
+  border-top: 1px solid #383838;
+}
+body.dark-mode .mobile-bottom-navigation div a {
+  color: #9b9b9b !important;
+}
+body.dark-mode .mobile-bottom-navigation div a.is-active {
+  background-color: #383838;
+  color: #fff !important;
+}
+body.dark-mode .mobile-bottom-navigation div a.is-active * {
+  color: #fff !important;
+}
+@media screen and (max-width: 1216px) {
+  body.dark-mode .main-title-bar {
+    background-color: #181818;
+  }
+}
+
+main::-webkit-scrollbar {
+  width: 0.9rem;
+}
+main::-webkit-scrollbar-thumb {
+  background: #cacaca;
+  border-radius: 99vmax;
+  border: 4px solid #f0f0f0;
+}
+main::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.dark-mode main::-webkit-scrollbar {
+  width: 0.9rem;
+}
+.dark-mode main::-webkit-scrollbar-thumb {
+  background: #6d6d6d;
+  border-radius: 99vmax;
+  border: 4px solid #111;
+}
+.dark-mode main::-webkit-scrollbar-track {
+  background: #111;
+}
+
+.toggle-control {
+  display: inline;
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.toggle-control input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.toggle-control input:checked ~ .control {
+  background-color: #262626;
+}
+.toggle-control input:checked ~ .control:after {
+  left: 36px;
+}
+.toggle-control .control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 70px;
+  border-radius: 17.5px;
+  background-color: #262626;
+  transition: background-color 0.15s ease-in;
+  background-image: url("../images/icons/light-dark-mode.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.toggle-control .control:after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 33px;
+  height: 33px;
+  border-radius: 17.5px;
+  background: white;
+  transition: left 0.15s ease-in;
+}
